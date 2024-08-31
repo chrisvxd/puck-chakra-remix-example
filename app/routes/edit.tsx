@@ -12,6 +12,7 @@ import invariant from "tiny-invariant";
 
 import puckConfig from "~/puck.config";
 import { getPage, setPage } from "~/models/page.server";
+import createEmotionCachePlugin from "@measured/puck-plugin-emotion-cache";
 
 export const action = async ({ params, request }: ActionFunctionArgs) => {
   const puckPath = params.puckPath || "/";
@@ -45,6 +46,8 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   return [{ title: `Editing: ${title}` }];
 };
 
+const chakraEmotionCachePlugin = createEmotionCachePlugin("cha");
+
 export default function Edit() {
   const { initialData } = useLoaderData<typeof loader>();
   const submit = useSubmit();
@@ -53,6 +56,7 @@ export default function Edit() {
     <Puck
       config={puckConfig as Config}
       data={initialData}
+      plugins={[chakraEmotionCachePlugin]}
       onPublish={async (data: Data) => {
         // Use form data here because it's the usual remix way.
         let formData = new FormData();

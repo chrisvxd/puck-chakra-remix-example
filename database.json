@@ -1,1 +1,1 @@
-{"/":{"content":[{"type":"HeadingBlock","props":{"title":"Edit this page by adding /edit to the end of the URL","id":"HeadingBlock-1694032984497"}}],"root":{"props": {"title":""}}}}
+{"/":{"content":[{"type":"HeadingBlock","props":{"title":"Edit this page by adding /edit to the end of the URL","id":"HeadingBlock-1694032984497"}},{"type":"ChakraButton","props":{"text":"Button","id":"ChakraButton-aeda34f4-c849-4cae-8e33-6aa1bfd99adc"}}],"root":{"props":{"title":""}},"zones":{}}}
